@@ -1392,6 +1392,8 @@ window.MARQUES_ORDRE=[];
     '<p class="msg" id="bt-msg" aria-live="polite"></p><div class="actions"><button class="btn" type="button" id="bt-go">Commencer</button></div></div>';
   box.innerHTML=h;box.hidden=false;
   [].forEach.call(box.querySelectorAll('input[name="bt-marque"]'),function(r){r.addEventListener('change',function(){var lf=document.getElementById('bt-lf');if(lf)lf.hidden=!(r.checked&&r.value==='libre');});});
+  /* v47 : la touche Entrée dans un champ de l'écran d'ouverture vaut « Commencer » */
+  box.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.isComposing&&e.target&&e.target.tagName==='INPUT'){e.preventDefault();document.getElementById('bt-go').click();}});
   document.getElementById('bt-go').addEventListener('click',function(){
     var ms=[0,1,2,3].map(function(i){var e=document.getElementById('bt-m'+i);return e?e.value.trim():'';}).filter(Boolean);
     var r=box.querySelector('input[name="bt-marque"]:checked'),msg=document.getElementById('bt-msg');
