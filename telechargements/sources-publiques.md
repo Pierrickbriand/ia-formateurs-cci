@@ -19,7 +19,6 @@ Fichier de contexte pour le projet Claude « Ma formation ». Il liste où vé
 
 - France compétences : https://www.francecompetences.fr/
 - Légifrance : https://www.legifrance.gouv.fr/ (textes de loi et règlements).
-- Centre Inffo : https://www.centre-inffo.fr/
 - Éduscol, pour un programme de lycée : https://eduscol.education.fr/
 
 ## Règle
